@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grocery</title>
+
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+     <!-- Google Font -->
+     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- swiper -->
+    <link
+    rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  
+    <!-- css -->
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+                <svg width="157" height="41" viewBox="0 0 157 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.12 5.44653L3.32 5.84653C5.37659 6.56108 7.57274 6.78035 9.73 6.48653C11.9969 6.13474 14.3171 6.44735 16.41 7.38653C17.5195 7.85898 18.4933 8.60145 19.2425 9.54634C19.9918 10.4912 20.4928 11.6085 20.7 12.7965C20.9107 13.939 20.8892 15.1122 20.6366 16.2461C20.3841 17.3801 19.9057 18.4515 19.23 19.3965C19.29 19.6065 19.35 19.8165 19.4 20.0265C19.8062 21.7536 20.0075 23.5224 20 25.2965H18C17.906 23.8444 17.7088 22.4007 17.41 20.9765C16.0226 21.7257 14.4667 22.1078 12.89 22.0865C11.4195 22.0855 9.96418 21.7897 8.61 21.2165C1 17.9665 2 7.15653 2 6.70653L2.12 5.44653ZM9.39 19.3765C12 20.4865 15.12 20.2965 16.87 18.9265C16.5742 17.9376 16.1684 16.9849 15.66 16.0865C15.2648 15.4399 14.7986 14.8396 14.27 14.2965C13.7299 13.7477 13.1216 13.2705 12.46 12.8765C11.0929 12.0591 9.5768 11.522 8 11.2965V10.2965C9.81422 10.2337 11.6173 10.6039 13.26 11.3765C14.9396 12.1961 16.364 13.458 17.38 15.0265C17.7568 15.6256 18.091 16.2505 18.38 16.8965C18.8435 15.7109 18.9749 14.4213 18.76 13.1665C18.6192 12.2881 18.2571 11.4599 17.7078 10.7601C17.1584 10.0603 16.4399 9.51187 15.62 9.16653C14.4244 8.60769 13.1198 8.32081 11.8 8.32653C11.18 8.32653 10.57 8.38653 9.93 8.43653C7.92568 8.69514 5.89067 8.57643 3.93 8.08653C4 10.8465 4.5 17.2965 9.39 19.3765Z" fill="#17C548"/>
+                <g clip-path="url(#clip0_1_1546)">
+                <path d="M23.7447 28.2344C35.3888 30.9431 38.63 21.2556 39.8001 16.5657C39.8306 16.4379 39.8351 16.3052 39.8134 16.1755C39.7916 16.0458 39.7441 15.9218 39.6736 15.8109C39.6032 15.6999 39.5111 15.6042 39.403 15.5294C39.2949 15.4546 39.1728 15.4023 39.0441 15.3755C22.4272 11.8303 20.5611 19.8521 18.8747 27.1015L17.9684 30.9975" stroke="#17C548" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18.8747 27.1014C18.8747 27.1014 20.2342 21.2574 28.2527 22.0961" stroke="#17C548" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <path d="M61.207 10.7C61.207 8.51333 60.047 7.42 57.727 7.42C55.407 7.42 54.247 8.51333 54.247 10.7V25.18C54.247 27.3933 55.407 28.5 57.727 28.5C60.047 28.5 61.207 27.3933 61.207 25.18V10.7ZM50.487 10.58C50.487 8.58 51.087 6.98 52.287 5.78C53.5136 4.58 55.3136 3.98 57.687 3.98C60.087 3.98 61.9003 4.59333 63.127 5.82C64.3537 7.02 64.967 8.60667 64.967 10.58V25.34C64.967 27.3133 64.3537 28.9 63.127 30.1C61.9003 31.3 60.1003 31.9 57.727 31.9C55.3536 31.9 53.5536 31.3 52.327 30.1C51.1003 28.9 50.487 27.3133 50.487 25.34V10.58ZM77.6798 8.38H78.5998V11.94H77.3998C76.1465 11.94 74.7731 12.4467 73.2798 13.46V31.5H69.5198V8.5H73.1198V10.18C73.1998 10.1267 73.3465 10.02 73.5598 9.86C73.7998 9.7 73.9465 9.60666 73.9998 9.58C74.0798 9.52667 74.2131 9.43333 74.3998 9.3C74.6131 9.16667 74.7598 9.08667 74.8398 9.06C74.9198 9.03333 75.0398 8.98 75.1998 8.9C75.3865 8.79333 75.5331 8.72667 75.6398 8.7C75.7465 8.67333 75.8798 8.63333 76.0398 8.58C76.2265 8.5 76.3998 8.46 76.5598 8.46C77.0398 8.40667 77.4131 8.38 77.6798 8.38ZM96.1176 9.98H94.7576C94.1443 9.98 93.6243 10.1 93.1976 10.34C93.9443 11.2733 94.3176 12.5133 94.3176 14.06V17.34C94.3176 19.2067 93.7443 20.66 92.5976 21.7C91.4776 22.74 89.7709 23.2733 87.4776 23.3C86.2243 23.3 85.5976 23.8867 85.5976 25.06C85.5976 25.62 85.7576 26.02 86.0776 26.26C86.4243 26.5 87.0243 26.62 87.8776 26.62H90.1976C93.9843 26.62 95.8776 28.2067 95.8776 31.38V32.06C95.8776 35.66 93.3309 37.46 88.2376 37.46H86.6776C83.7709 37.46 81.5709 36.9933 80.0776 36.06V32.54C81.8376 33.6867 84.0109 34.26 86.5976 34.26H87.8776C89.4776 34.26 90.6109 34.0733 91.2776 33.7C91.9443 33.3267 92.2776 32.7667 92.2776 32.02V31.66C92.2776 31.02 92.1043 30.5533 91.7576 30.26C91.4376 29.94 90.7976 29.78 89.8376 29.78H87.3976C83.9576 29.78 82.2376 28.62 82.2376 26.3V25.66C82.2376 24.1667 82.9443 23.26 84.3576 22.94C81.6643 22.1667 80.3176 20.3 80.3176 17.34V14.06C80.3176 12.1667 80.8909 10.7 82.0376 9.66C83.2109 8.62 84.8376 8.1 86.9176 8.1C88.9976 8.1 90.5976 8.42 91.7176 9.06C92.2776 7.35333 93.5443 6.5 95.5176 6.5H96.1176V9.98ZM90.5576 17.3V14.1C90.5576 13.1133 90.3043 12.3933 89.7976 11.94C89.2909 11.46 88.4643 11.22 87.3176 11.22C86.1709 11.22 85.3443 11.46 84.8376 11.94C84.3309 12.3933 84.0776 13.1133 84.0776 14.1V17.3C84.0776 18.2867 84.3309 19.02 84.8376 19.5C85.3443 19.9533 86.1709 20.18 87.3176 20.18C88.4643 20.18 89.2909 19.9533 89.7976 19.5C90.3043 19.02 90.5576 18.2867 90.5576 17.3ZM101.606 24.9V26.1C101.606 26.98 101.806 27.6333 102.206 28.06C102.633 28.4867 103.446 28.7 104.646 28.7C105.873 28.7 106.993 28.2867 108.006 27.46V20.78L104.206 21.82C103.166 22.1133 102.473 22.4867 102.126 22.94C101.78 23.3667 101.606 24.02 101.606 24.9ZM99.0064 9.06C100.526 8.55333 102.46 8.3 104.806 8.3C109.366 8.3 111.646 10.3667 111.646 14.5V31.5H108.046V29.86C106.873 31.0333 105.326 31.62 103.406 31.62C99.7264 31.62 97.8864 29.7667 97.8864 26.06V24.74C97.8864 23.2467 98.273 22.0467 99.0464 21.14C99.8197 20.2067 101.06 19.5 102.766 19.02L108.006 17.58V14.5C108.006 13.5133 107.74 12.8067 107.206 12.38C106.673 11.9267 105.54 11.7 103.806 11.7C102.1 11.7 100.5 11.9667 99.0064 12.5V9.06ZM119.995 9.54C121.701 8.79333 123.288 8.42 124.755 8.42C126.248 8.42 127.461 8.87333 128.395 9.78C129.355 10.66 129.835 11.94 129.835 13.62V31.5H125.995V14.26C125.995 12.6867 125.208 11.9 123.635 11.9C122.488 11.9 121.328 12.1933 120.155 12.78V31.5H116.395V8.5H119.995V9.54ZM138.678 4.3C138.678 5.76667 137.945 6.5 136.478 6.5C135.011 6.5 134.278 5.76667 134.278 4.3C134.278 2.80666 135.011 2.06 136.478 2.06C137.945 2.06 138.678 2.80666 138.678 4.3ZM134.598 8.78H138.358V31.5H134.598V8.78ZM142.909 14.38C142.909 10.3267 145.256 8.3 149.949 8.3C151.629 8.3 153.122 8.48666 154.429 8.86V12.34C153.096 11.9667 151.736 11.78 150.349 11.78C148.989 11.78 148.029 12.0067 147.469 12.46C146.936 12.9133 146.669 13.6333 146.669 14.62V25.42C146.669 26.4067 146.936 27.1267 147.469 27.58C148.029 28.0333 149.016 28.26 150.429 28.26C151.842 28.26 153.189 28.0467 154.469 27.62V31.14C152.922 31.5133 151.416 31.7 149.949 31.7C145.256 31.7 142.909 29.6733 142.909 25.62V14.38Z" fill="black"/>
+                <defs>
+                <clipPath id="clip0_1_1546">
+                <rect width="24" height="24" fill="white" transform="translate(20.0311 8.88989) rotate(13.0957)"/>
+                </clipPath>
+                </defs>
+                </svg>
+                <i class="menuicon fa-solid fa-bars"></i>
+        </div>
+        <div class="closelist menuParent">
+            <div class="menu">
+                <ul>
+                    <li class="liclose" style="border: none;"><i class="closemenu fa-solid fa-xmark"></i></li>
+
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48"><g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"><path d="M18.88 7.566a1 1 0 0 1 1 1v6.6a1 1 0 1 1-2 0v-6.6a1 1 0 0 1 1-1"/><path d="M11.78 13.905c1.13-.27 2.283-.065 3.48.553c.975.505 1.667.736 2.206.847c.538.112.966.114 1.483.114v2h-.02c-.516 0-1.12 0-1.868-.155c-.757-.157-1.622-.462-2.72-1.03c-.878-.453-1.54-.517-2.096-.384c-.584.14-1.201.53-1.912 1.264c-1.632 1.688-2.139 3.426-2.316 4.762c-.1 1.644.197 4.89 1.668 8.063c.5 1.08 1.21 2.57 2.076 3.737c.432.582.866 1.03 1.283 1.306c.405.267.741.34 1.046.288c3.123-.538 3.71-.551 4.319-.551h1.037v2H18.38c-.422 0-.92 0-3.95.522c-.94.162-1.787-.127-2.488-.59c-.689-.455-1.284-1.106-1.787-1.783c-1.005-1.353-1.791-3.024-2.284-4.088c-1.638-3.532-1.972-7.137-1.848-9.064l.003-.032l.004-.032c.212-1.644.844-3.839 2.866-5.928c.845-.874 1.783-1.556 2.885-1.82"/><path d="M14.64 11.41c1.496 1.431 2.307 3.166 2.307 4.51a1 1 0 1 0 2 0c0-2.05-1.168-4.275-2.925-5.956C14.244 8.265 11.743 7 8.896 7a1 1 0 0 0 0 2c2.244 0 4.268.999 5.743 2.41"/><path d="M8.574 7.009a1 1 0 0 1 1.116.868c.492 3.93 3.945 6 6.734 7.115a1 1 0 0 1-.743 1.857c-2.869-1.147-7.335-3.604-7.975-8.724a1 1 0 0 1 .868-1.116m17.188 6.894c-1.152-.264-2.334-.066-3.57.548c-1.02.506-1.747.74-2.317.853s-1.022.115-1.56.115a1 1 0 0 0 0 2h.019c.537 0 1.16 0 1.93-.153c.781-.155 1.676-.458 2.816-1.024c.924-.458 1.632-.528 2.236-.39c.626.144 1.277.542 2.017 1.277c1.716 1.703 2.235 3.452 2.414 4.784a1 1 0 0 0 1.982-.266c-.222-1.653-.884-3.85-2.987-5.938c-.881-.874-1.85-1.548-2.98-1.806m.945 20.377a1 1 0 0 0-1.414.027c-.757.786-1.393 1.05-1.931.962c-3.252-.538-3.86-.55-4.485-.55a1 1 0 0 0 0 2h.028c.447 0 .967 0 4.13.523c1.522.252 2.785-.599 3.699-1.548a1 1 0 0 0-.027-1.415"/><path d="M32.65 16.103c-1.003 1.81-1.263 3.709-.864 4.992a1 1 0 1 1-1.91.594c-.609-1.959-.153-4.43 1.025-6.556c1.193-2.152 3.206-4.101 5.925-4.947a1 1 0 1 1 .594 1.91c-2.143.666-3.78 2.222-4.77 4.007"/><path d="M34.719 17.379c-1.168 1.71-2.748 2.793-4.073 3.013a1 1 0 1 0 .326 1.973c2.023-.335 4.027-1.851 5.398-3.858c1.388-2.032 2.227-4.706 1.762-7.515a1 1 0 1 0-1.974.326c.367 2.214-.288 4.375-1.44 6.06"/><path d="M31.78 23a2.5 2.5 0 1 0 0 5a2.5 2.5 0 0 0 0-5m-4.5 2.5a4.5 4.5 0 1 1 9 0a4.5 4.5 0 0 1-9 0"/><path d="M37.845 18.09a4.5 4.5 0 0 1 2.716 5.755a1 1 0 1 1-1.883-.675a2.5 2.5 0 1 0-4.706-1.69a1 1 0 0 1-1.882-.675a4.5 4.5 0 0 1 5.755-2.715"/><path d="M36.253 23.176a4.501 4.501 0 0 1 3.822 8.014a1 1 0 1 1-1.144-1.64a2.5 2.5 0 1 0-3.008-3.99a1 1 0 1 1-1.262-1.552a4.5 4.5 0 0 1 1.592-.832M27.78 29a2.5 2.5 0 1 0 0 5a2.5 2.5 0 0 0 0-5m-4.5 2.5a4.5 4.5 0 1 1 9 0a4.5 4.5 0 0 1-9 0"/><path d="M35.78 29a2.5 2.5 0 1 0 0 5a2.5 2.5 0 0 0 0-5m-4.5 2.5a4.5 4.5 0 1 1 9 0a4.5 4.5 0 0 1-9 0"/><path d="M31.78 35a2.5 2.5 0 1 0 0 5a2.5 2.5 0 0 0 0-5m-4.5 2.5a4.5 4.5 0 1 1 9 0a4.5 4.5 0 0 1-9 0"/><path d="M37.834 33.966a1 1 0 0 1 1.278-.606a4.5 4.5 0 1 1-4.675 7.44a1 1 0 1 1 1.405-1.423a2.5 2.5 0 1 0 2.598-4.133a1 1 0 0 1-.606-1.278"/></g></svg>
+                        <a href="#">fruit and vegetables</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" d="M17.85 1H6.15v3.59L4 9.49V23h16V9.49l-2.15-4.9zm-.918 6.476L18 9.91V21h-1.95V9.878zM14.05 10.7V21H6V10.7zm-7.52-2l1.273-2.9h7.614l-1.065 2.9zm1.62-4.9V3h7.7v.8zM13 13h-1.426l-1.576 1.584L8.415 13H7v6h2v-2.586l1.002 1.002l.998-1.003V19h2z"/></svg>
+                        <a href="#">dairy</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48"><g fill="currentColor"><path d="M14 14a1 1 0 1 0 0-2a1 1 0 0 0 0 2"/><path fill-rule="evenodd" d="M15.086 6c1.26-1.26 3.414-.368 3.414 1.414V9h1.586c1.782 0 2.674 2.154 1.414 3.414l-1.793 1.793l-.037.036l3.456 5.847a4 4 0 0 0 4.08 1.914l12.58-2.027c1.63-.263 2.74 1.609 1.728 2.914c-.97 1.251-1.459 2.85-1.812 4.6C38.384 34.02 32.854 39.052 26 39.88V42h2.5v2H19v-2h5v-2c-5.414 0-10.21-2.607-13.107-6.608c-2.324-3.21-1.946-7.335-1.006-10.767l.495-1.805a7 7 0 0 0 .181-2.822L10.5 18H7.914C6.132 18 5.24 15.846 6.5 14.586zm5 5l-1.466 1.466l-.73-1.233a5 5 0 0 0-.307-.455c.275.142.586.222.917.222zM16.5 9c0 .334.082.65.227.926a4.55 4.55 0 0 0-1.894-.845L16.5 7.414zm-8.586 7l1.595-1.594q.06.312.168.624l.334.97zm3.654-1.622a2.548 2.548 0 0 1 4.601-2.127l5.236 8.857a6 6 0 0 0 6.119 2.87l12.148-1.957c-1.082 1.557-1.589 3.383-1.93 5.075a13.1 13.1 0 0 1-1.419 3.815a1 1 0 0 0-.247.222C34.183 33.513 31.378 35 28.264 35C22.654 35 18 30.136 18 24a1 1 0 0 0-2 0c0 7.12 5.432 13 12.264 13q.6 0 1.184-.06A14.4 14.4 0 0 1 24 38c-4.763 0-8.96-2.291-11.487-5.78c-1.766-2.439-1.6-5.773-.697-9.066l.495-1.806a9 9 0 0 0-.171-5.311z" clip-rule="evenodd"/></g></svg>
+                        <a href="#">meat</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" d="M240 152c-50.71 12.21-94.15 52.31-120.3 73.43a261 261 0 0 0-23.81-19.58C59.53 179.29 16 176 16 176s11.37 51.53 41.36 79.83C27.37 284.14 16 335.67 16 335.67s43.53-3.29 79.89-29.85a259 259 0 0 0 23.61-19.41c26.1 21.14 69.74 61.34 120.5 73.59l-16 56c39.43-6.67 78.86-35.51 94.72-48.25C448 362 496 279 496 256c0-22-48-106-176.89-111.73C303.52 131.78 263.76 102.72 224 96Z"/><circle cx="416" cy="239.99" r="16" fill="currentColor"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="20" stroke-width="32" d="M378.37 356a199.22 199.22 0 0 1 0-200"/></svg>
+                        <a href="#">fish</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" d="M17.85 1H6.15v3.59L4 9.49V23h16V9.49l-2.15-4.9zm-.918 6.476L18 9.91V21h-1.95V9.878zM14.05 10.7V21H6V10.7zm-7.52-2l1.273-2.9h7.614l-1.065 2.9zm1.62-4.9V3h7.7v.8zM13 13h-1.426l-1.576 1.584L8.415 13H7v6h2v-2.586l1.002 1.002l.998-1.003V19h2z"/></svg>
+                        <a href="#">dairy</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48"><g fill="currentColor"><path d="M14 14a1 1 0 1 0 0-2a1 1 0 0 0 0 2"/><path fill-rule="evenodd" d="M15.086 6c1.26-1.26 3.414-.368 3.414 1.414V9h1.586c1.782 0 2.674 2.154 1.414 3.414l-1.793 1.793l-.037.036l3.456 5.847a4 4 0 0 0 4.08 1.914l12.58-2.027c1.63-.263 2.74 1.609 1.728 2.914c-.97 1.251-1.459 2.85-1.812 4.6C38.384 34.02 32.854 39.052 26 39.88V42h2.5v2H19v-2h5v-2c-5.414 0-10.21-2.607-13.107-6.608c-2.324-3.21-1.946-7.335-1.006-10.767l.495-1.805a7 7 0 0 0 .181-2.822L10.5 18H7.914C6.132 18 5.24 15.846 6.5 14.586zm5 5l-1.466 1.466l-.73-1.233a5 5 0 0 0-.307-.455c.275.142.586.222.917.222zM16.5 9c0 .334.082.65.227.926a4.55 4.55 0 0 0-1.894-.845L16.5 7.414zm-8.586 7l1.595-1.594q.06.312.168.624l.334.97zm3.654-1.622a2.548 2.548 0 0 1 4.601-2.127l5.236 8.857a6 6 0 0 0 6.119 2.87l12.148-1.957c-1.082 1.557-1.589 3.383-1.93 5.075a13.1 13.1 0 0 1-1.419 3.815a1 1 0 0 0-.247.222C34.183 33.513 31.378 35 28.264 35C22.654 35 18 30.136 18 24a1 1 0 0 0-2 0c0 7.12 5.432 13 12.264 13q.6 0 1.184-.06A14.4 14.4 0 0 1 24 38c-4.763 0-8.96-2.291-11.487-5.78c-1.766-2.439-1.6-5.773-.697-9.066l.495-1.806a9 9 0 0 0-.171-5.311z" clip-rule="evenodd"/></g></svg>
+                        <a href="#">meat</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" d="M240 152c-50.71 12.21-94.15 52.31-120.3 73.43a261 261 0 0 0-23.81-19.58C59.53 179.29 16 176 16 176s11.37 51.53 41.36 79.83C27.37 284.14 16 335.67 16 335.67s43.53-3.29 79.89-29.85a259 259 0 0 0 23.61-19.41c26.1 21.14 69.74 61.34 120.5 73.59l-16 56c39.43-6.67 78.86-35.51 94.72-48.25C448 362 496 279 496 256c0-22-48-106-176.89-111.73C303.52 131.78 263.76 102.72 224 96Z"/><circle cx="416" cy="239.99" r="16" fill="currentColor"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="20" stroke-width="32" d="M378.37 356a199.22 199.22 0 0 1 0-200"/></svg>
+                        <a href="#">fish</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" d="M17.85 1H6.15v3.59L4 9.49V23h16V9.49l-2.15-4.9zm-.918 6.476L18 9.91V21h-1.95V9.878zM14.05 10.7V21H6V10.7zm-7.52-2l1.273-2.9h7.614l-1.065 2.9zm1.62-4.9V3h7.7v.8zM13 13h-1.426l-1.576 1.584L8.415 13H7v6h2v-2.586l1.002 1.002l.998-1.003V19h2z"/></svg>
+                        <a href="#">dairy</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48"><g fill="currentColor"><path d="M14 14a1 1 0 1 0 0-2a1 1 0 0 0 0 2"/><path fill-rule="evenodd" d="M15.086 6c1.26-1.26 3.414-.368 3.414 1.414V9h1.586c1.782 0 2.674 2.154 1.414 3.414l-1.793 1.793l-.037.036l3.456 5.847a4 4 0 0 0 4.08 1.914l12.58-2.027c1.63-.263 2.74 1.609 1.728 2.914c-.97 1.251-1.459 2.85-1.812 4.6C38.384 34.02 32.854 39.052 26 39.88V42h2.5v2H19v-2h5v-2c-5.414 0-10.21-2.607-13.107-6.608c-2.324-3.21-1.946-7.335-1.006-10.767l.495-1.805a7 7 0 0 0 .181-2.822L10.5 18H7.914C6.132 18 5.24 15.846 6.5 14.586zm5 5l-1.466 1.466l-.73-1.233a5 5 0 0 0-.307-.455c.275.142.586.222.917.222zM16.5 9c0 .334.082.65.227.926a4.55 4.55 0 0 0-1.894-.845L16.5 7.414zm-8.586 7l1.595-1.594q.06.312.168.624l.334.97zm3.654-1.622a2.548 2.548 0 0 1 4.601-2.127l5.236 8.857a6 6 0 0 0 6.119 2.87l12.148-1.957c-1.082 1.557-1.589 3.383-1.93 5.075a13.1 13.1 0 0 1-1.419 3.815a1 1 0 0 0-.247.222C34.183 33.513 31.378 35 28.264 35C22.654 35 18 30.136 18 24a1 1 0 0 0-2 0c0 7.12 5.432 13 12.264 13q.6 0 1.184-.06A14.4 14.4 0 0 1 24 38c-4.763 0-8.96-2.291-11.487-5.78c-1.766-2.439-1.6-5.773-.697-9.066l.495-1.806a9 9 0 0 0-.171-5.311z" clip-rule="evenodd"/></g></svg>
+                        <a href="#">meat</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" d="M240 152c-50.71 12.21-94.15 52.31-120.3 73.43a261 261 0 0 0-23.81-19.58C59.53 179.29 16 176 16 176s11.37 51.53 41.36 79.83C27.37 284.14 16 335.67 16 335.67s43.53-3.29 79.89-29.85a259 259 0 0 0 23.61-19.41c26.1 21.14 69.74 61.34 120.5 73.59l-16 56c39.43-6.67 78.86-35.51 94.72-48.25C448 362 496 279 496 256c0-22-48-106-176.89-111.73C303.52 131.78 263.76 102.72 224 96Z"/><circle cx="416" cy="239.99" r="16" fill="currentColor"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="20" stroke-width="32" d="M378.37 356a199.22 199.22 0 0 1 0-200"/></svg>
+                        <a href="#">fish</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" d="M17.85 1H6.15v3.59L4 9.49V23h16V9.49l-2.15-4.9zm-.918 6.476L18 9.91V21h-1.95V9.878zM14.05 10.7V21H6V10.7zm-7.52-2l1.273-2.9h7.614l-1.065 2.9zm1.62-4.9V3h7.7v.8zM13 13h-1.426l-1.576 1.584L8.415 13H7v6h2v-2.586l1.002 1.002l.998-1.003V19h2z"/></svg>
+                        <a href="#">dairy</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48"><g fill="currentColor"><path d="M14 14a1 1 0 1 0 0-2a1 1 0 0 0 0 2"/><path fill-rule="evenodd" d="M15.086 6c1.26-1.26 3.414-.368 3.414 1.414V9h1.586c1.782 0 2.674 2.154 1.414 3.414l-1.793 1.793l-.037.036l3.456 5.847a4 4 0 0 0 4.08 1.914l12.58-2.027c1.63-.263 2.74 1.609 1.728 2.914c-.97 1.251-1.459 2.85-1.812 4.6C38.384 34.02 32.854 39.052 26 39.88V42h2.5v2H19v-2h5v-2c-5.414 0-10.21-2.607-13.107-6.608c-2.324-3.21-1.946-7.335-1.006-10.767l.495-1.805a7 7 0 0 0 .181-2.822L10.5 18H7.914C6.132 18 5.24 15.846 6.5 14.586zm5 5l-1.466 1.466l-.73-1.233a5 5 0 0 0-.307-.455c.275.142.586.222.917.222zM16.5 9c0 .334.082.65.227.926a4.55 4.55 0 0 0-1.894-.845L16.5 7.414zm-8.586 7l1.595-1.594q.06.312.168.624l.334.97zm3.654-1.622a2.548 2.548 0 0 1 4.601-2.127l5.236 8.857a6 6 0 0 0 6.119 2.87l12.148-1.957c-1.082 1.557-1.589 3.383-1.93 5.075a13.1 13.1 0 0 1-1.419 3.815a1 1 0 0 0-.247.222C34.183 33.513 31.378 35 28.264 35C22.654 35 18 30.136 18 24a1 1 0 0 0-2 0c0 7.12 5.432 13 12.264 13q.6 0 1.184-.06A14.4 14.4 0 0 1 24 38c-4.763 0-8.96-2.291-11.487-5.78c-1.766-2.439-1.6-5.773-.697-9.066l.495-1.806a9 9 0 0 0-.171-5.311z" clip-rule="evenodd"/></g></svg>
+                        <a href="#">meat</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" d="M240 152c-50.71 12.21-94.15 52.31-120.3 73.43a261 261 0 0 0-23.81-19.58C59.53 179.29 16 176 16 176s11.37 51.53 41.36 79.83C27.37 284.14 16 335.67 16 335.67s43.53-3.29 79.89-29.85a259 259 0 0 0 23.61-19.41c26.1 21.14 69.74 61.34 120.5 73.59l-16 56c39.43-6.67 78.86-35.51 94.72-48.25C448 362 496 279 496 256c0-22-48-106-176.89-111.73C303.52 131.78 263.76 102.72 224 96Z"/><circle cx="416" cy="239.99" r="16" fill="currentColor"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="20" stroke-width="32" d="M378.37 356a199.22 199.22 0 0 1 0-200"/></svg>
+                        <a href="#">fish</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div> 
+
+
+        <div class="nav-input">
+            <select name="" id="">
+                <option value="">All Categories</option>
+                <option value="">grocery</option>
+                <option value="">Drinks</option>
+                <option value="">Chocolates</option>
+            </select>
+            <input type="search" placeholder="Search for more than 20,000 product">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div><!-- nav-input -->
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a class="pages" href="#">Pages <i class="fa-solid fa-caret-down"></i></a>
+            <ul class="list openlist closelist">
+                <li><a href="">about us</a></li>
+                <li><a href="">shop</a></li>
+                <li><a href="">cart</a></li>
+                <li><a href="">single product</a></li>
+                <li><a href="">check out</a></li>
+                <li><a href="">blog</a></li>
+            </ul>
+        </div><!-- nav-links -->
+        <div class="nav-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32"><path fill="currentColor" d="M16 8a5 5 0 1 0 5 5a5 5 0 0 0-5-5m0 8a3 3 0 1 1 3-3a3.003 3.003 0 0 1-3 3"/><path fill="currentColor" d="M16 2a14 14 0 1 0 14 14A14.016 14.016 0 0 0 16 2m-6 24.377V25a3.003 3.003 0 0 1 3-3h6a3.003 3.003 0 0 1 3 3v1.377a11.9 11.9 0 0 1-12 0m13.993-1.451A5 5 0 0 0 19 20h-6a5 5 0 0 0-4.992 4.926a12 12 0 1 1 15.985 0"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path fill="currentColor" d="M178 36c-20.09 0-37.92 7.93-50 21.56C115.92 43.93 98.09 36 78 36a66.08 66.08 0 0 0-66 66c0 72.34 105.81 130.14 110.31 132.57a12 12 0 0 0 11.38 0C138.19 232.14 244 174.34 244 102a66.08 66.08 0 0 0-66-66m-5.49 142.36a328.7 328.7 0 0 1-44.51 31.8a328.7 328.7 0 0 1-44.51-31.8C61.82 159.77 36 131.42 36 102a42 42 0 0 1 42-42c17.8 0 32.7 9.4 38.89 24.54a12 12 0 0 0 22.22 0C145.3 69.4 160.2 60 178 60a42 42 0 0 1 42 42c0 29.42-25.82 57.77-47.49 76.36"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 14 14"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12.36 6H1.64a1 1 0 0 0-1 1.13l.73 5.5a1 1 0 0 0 1 .87h9.24a1 1 0 0 0 1-.87l.73-5.5A1 1 0 0 0 12.36 6M4.5 8.5V11M7 8.5V11m2.5-2.5V11"/><path d="M9.48 1.54A2.79 2.79 0 0 1 11.78 4L12 6M2 6l.22-2a2.79 2.79 0 0 1 2.3-2.44"/><path d="M9.5 1.75A1.25 1.25 0 0 1 8.25 3h-2.5a1.25 1.25 0 0 1 0-2.5h2.5A1.25 1.25 0 0 1 9.5 1.75"/></g></svg>
+        </div><!-- nav-icon -->
+
+    </nav>
+
+
+    <header>
+       <div class="container">
+
+
+        <h1><span style="color: #7fad39; font-weight: bold;">Organic</span> Foods at <br> your <span style="font-weight: bold;">Doorsteps</span></h1>
+        <p>Dignissim massa diam elementum.</p>
+        <div class="header-btn">
+            <button style="background-color: #7fad39;">START SHOPPING</button>
+            <button >JOIN NOW</button>
+        </div>
+        <div class="rating">
+            <div><h1>14k+</h1><p>Product <br> Varieties</p></div>
+            <div><h1>50k+</h1><p>Happy <br> Customers</p></div>
+            <div><h1>10+</h1><p>Store <br> Locations</p></div>
+        </div>
+        <div class="adv">
+
+            <div style="background-color: #7fad39;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 15 15"><path fill="currentColor" d="m14.5 3.5l.354.354a.5.5 0 0 0 0-.708zm-14 8l-.354-.354a.5.5 0 0 0 0 .708zM11.146.854l3 3l.708-.708l-3-3zm3 2.292l-3 3l.708.708l3-3zm-10.292 11l-3-3l-.708.708l3 3zm-3-2.292l3-3l-.708-.708l-3 3zM.5 12h11v-1H.5zM15 8.5V7h-1v1.5zM11.5 12A3.5 3.5 0 0 0 15 8.5h-1a2.5 2.5 0 0 1-2.5 2.5zm3-9h-11v1h11zM0 6.5V8h1V6.5zM3.5 3A3.5 3.5 0 0 0 0 6.5h1A2.5 2.5 0 0 1 3.5 4z"/></svg>
+                <p>
+                    <span style="font-weight: bold;">Fresh from farm</span><br>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+            </div>
+            <div style="background-color: #33421c;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2M9.6 17.2c-.22 0-.52-.08-.8-.2l-.57 1.4l-1.14-.4l.16-.39C8.45 14.59 9.83 11.15 15 10c0 0-6 0-7.95 5.55c0 0-1.05-1.05-1.05-2.25s1.2-3.75 4.2-4.35c.85-.17 1.8-.3 2.74-.45C15.3 8.18 17.57 7.86 18 7c0 0-1.8 10.2-8.4 10.2"/></svg>
+                <p>
+                    <span style="font-weight: bold;">100% Organic</span><br>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+            </div>
+            <div style="background-color: rgb(255, 91, 15);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 1024 1024"><path fill="currentColor" d="M128.896 736H96a32 32 0 0 1-32-32V224a32 32 0 0 1 32-32h576a32 32 0 0 1 32 32v96h164.544a32 32 0 0 1 31.616 27.136l54.144 352A32 32 0 0 1 922.688 736h-91.52a144 144 0 1 1-286.272 0H415.104a144 144 0 1 1-286.272 0zm23.36-64a143.872 143.872 0 0 1 239.488 0H568.32c17.088-25.6 42.24-45.376 71.744-55.808V256H128v416zm655.488 0h77.632l-19.648-128H704v64.896A144 144 0 0 1 807.744 672m48.128-192l-14.72-96H704v96zM688 832a80 80 0 1 0 0-160a80 80 0 0 0 0 160m-416 0a80 80 0 1 0 0-160a80 80 0 0 0 0 160"/></svg>
+                <p>
+                    <span style="font-weight: bold;">free delivery</span><br>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+            </div>
+
+        </div>
+
+       </div>
+    </header>
+
+
+    <section>
+        <div class="container">
+            <div class="heading">
+                <h2>category</h2>
+                <button>view all</button>
+            </div>
+           <div class="swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="category-cart">
+                        <img src="images/category-thumb-1.jpg" alt="">
+                        <p>fruit & veges</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="category-cart">
+                        <img src="images/category-thumb-2.jpg" alt="">
+                        <p>breads & sweet</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="category-cart">
+                        <img src="images/category-thumb-3.jpg" alt="">
+                        <p>fruit & veges</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="category-cart">
+                        <img src="images/category-thumb-4.jpg" alt="">
+                        <p>beverages</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="category-cart">
+                        <img src="images/category-thumb-5.jpg" alt="">
+                        <p>meat products</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="category-cart">
+                        <img src="images/category-thumb-6.jpg" alt="">
+                        <p>breads & sweets</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="category-cart">
+                        <img src="images/category-thumb-7.jpg" alt="">
+                        <p>eggs</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="category-cart">
+                        <img src="images/category-thumb-8.jpg" alt="">
+                        <p>eggs</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="category-cart">
+                        <img src="images/category-thumb-1.jpg" alt="">
+                        <p>eggs</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="category-cart">
+                        <img src="images/category-thumb-1.jpg" alt="">
+                        <p>eggs</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="category-cart">
+                        <img src="images/category-thumb-1.jpg" alt="">
+                        <p>eggs</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="category-cart">
+                        <img src="images/category-thumb-1.jpg" alt="">
+                        <p>eggs</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="category-cart">
+                        <img src="images/category-thumb-4.jpg" alt="">
+                        <p>eggs</p>
+                    </div>
+                </div>
+            </div>
+
+           </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container">
+            <div class="heading">
+                <h2>Best Selling Products</h2>
+                <button>view all</button>
+            </div>
+            <div class="best-selling">
+
+
+                <div class="card">
+                    <img src="images/product-thumb-1.png" alt="">
+                    <p>Whole Wheat Sandwich Bread</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <p>(222)</p>
+                    </div>
+                    <div style="display: flex;align-items: center;">
+                        <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                        <p>$18.00</p>
+                        <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                    </div>
+                    <div class="card-btn">
+                        <input value="1"  type="number">
+                        <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                        <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/product-thumb-2.png" alt="">
+                    <p>Whole Wheat Sandwich Bread</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <p>(222)</p>
+                    </div>
+                    <div style="display: flex;align-items: center;">
+                        <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                        <p>$18.00</p>
+                        <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                    </div>
+                    <div class="card-btn">
+                        <input value="1"  type="number">
+                        <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                        <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/product-thumb-3.png" alt="">
+                    <p>Whole Wheat Sandwich Bread</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <p>(222)</p>
+                    </div>
+                    <div style="display: flex;align-items: center;">
+                        <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                        <p>$18.00</p>
+                        <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                    </div>
+                    <div class="card-btn">
+                        <input value="1"  type="number">                        <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                        <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/product-thumb-4.png" alt="">
+                    <p>Whole Wheat Sandwich Bread</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <p>(222)</p>
+                    </div>
+                    <div style="display: flex;align-items: center;">
+                        <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                        <p>$18.00</p>
+                        <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                    </div>
+                    <div class="card-btn">
+                        <input value="1"  type="number">                        <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                        <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/product-thumb-5.png" alt="">
+                    <p>Whole Wheat Sandwich Bread</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <p>(222)</p>
+                    </div>
+                    <div style="display: flex;align-items: center;">
+                        <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                        <p>$18.00</p>
+                        <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                    </div>
+                    <div class="card-btn">
+                        <input value="1"  type="number">                        <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                        <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/product-thumb-6.png" alt="">
+                    <p>Whole Wheat Sandwich Bread</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <p>(222)</p>
+                    </div>
+                    <div style="display: flex;align-items: center;">
+                        <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                        <p>$18.00</p>
+                        <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                    </div>
+                    <div class="card-btn">
+                        <input value="1"  type="number">                        <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                        <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/product-thumb-7.png" alt="">
+                    <p>Whole Wheat Sandwich Bread</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <p>(222)</p>
+                    </div>
+                    <div style="display: flex;align-items: center;">
+                        <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                        <p>$18.00</p>
+                        <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                    </div>
+                    <div class="card-btn">
+                        <input value="1"  type="number">                        <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                        <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/product-thumb-8.png" alt="">
+                    <p>Whole Wheat Sandwich Bread</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <p>(222)</p>
+                    </div>
+                    <div style="display: flex;align-items: center;">
+                        <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                        <p>$18.00</p>
+                        <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                    </div>
+                    <div class="card-btn">
+                        <input value="1"  type="number">                        <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                        <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/product-thumb-9.png" alt="">
+                    <p>Whole Wheat Sandwich Bread</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <p>(222)</p>
+                    </div>
+                    <div style="display: flex;align-items: center;">
+                        <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                        <p>$18.00</p>
+                        <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                    </div>
+                    <div class="card-btn">
+                        <input value="1"  type="number">                        <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                        <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/product-thumb-10.png" alt="">
+                    <p>Whole Wheat Sandwich Bread</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <p>(222)</p>
+                    </div>
+                    <div style="display: flex;align-items: center;">
+                        <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                        <p>$18.00</p>
+                        <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                    </div>
+                    <div class="card-btn">
+                        <input value="1"  type="number">
+                        <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                        <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container">
+            <div class="baner">
+                <div class="baner1">
+                    <h2>items on sale</h2>
+                    <p>descount up to 20%</p>
+                    <button>shop now</button>
+                </div>
+                <div class="baner2">
+                    <h2>items on sale</h2>
+                    <p>descount up to 20%</p>
+                    <button>shop now</button>
+                </div>
+                <div class="baner3">
+                    <h2>items on sale</h2>
+                    <p>descount up to 20%</p>
+                    <button>shop now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container">
+            <div class="heading">
+                <h2>Featured products</h2>
+                <button>view all</button>
+            </div>
+           <div class="swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="images/product-thumb-11.png" alt="">
+                        <p>Whole Wheat Sandwich Bread</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <p>(222)</p>
+                        </div>
+                        <div style="display: flex;align-items: center;">
+                            <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                            <p>$18.00</p>
+                            <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                        </div>
+                        <div class="card-btn">
+                            <input value="1"  type="number">
+                            <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                            <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="images/product-thumb-12.png" alt="">
+                        <p>Whole Wheat Sandwich Bread</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <p>(222)</p>
+                        </div>
+                        <div style="display: flex;align-items: center;">
+                            <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                            <p>$18.00</p>
+                            <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                        </div>
+                        <div class="card-btn">
+                            <input value="1"  type="number">
+                            <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                            <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="images/product-thumb-13.png" alt="">
+                        <p>Whole Wheat Sandwich Bread</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <p>(222)</p>
+                        </div>
+                        <div style="display: flex;align-items: center;">
+                            <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                            <p>$18.00</p>
+                            <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                        </div>
+                        <div class="card-btn">
+                            <input value="1"  type="number">
+                            <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                            <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="images/product-thumb-14.png" alt="">
+                        <p>Whole Wheat Sandwich Bread</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <p>(222)</p>
+                        </div>
+                        <div style="display: flex;align-items: center;">
+                            <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                            <p>$18.00</p>
+                            <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                        </div>
+                        <div class="card-btn">
+                            <input value="1"  type="number">
+                            <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                            <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="images/product-thumb-16.png" alt="">
+                        <p>Whole Wheat Sandwich Bread</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <p>(222)</p>
+                        </div>
+                        <div style="display: flex;align-items: center;">
+                            <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                            <p>$18.00</p>
+                            <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                        </div>
+                        <div class="card-btn">
+                            <input value="1"  type="number">
+                            <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                            <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="images/product-thumb-17.png" alt="">
+                        <p>Whole Wheat Sandwich Bread</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <p>(222)</p>
+                        </div>
+                        <div style="display: flex;align-items: center;">
+                            <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                            <p>$18.00</p>
+                            <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                        </div>
+                        <div class="card-btn">
+                            <input value="1"  type="number">
+                            <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                            <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="images/product-thumb-18.png" alt="">
+                        <p>Whole Wheat Sandwich Bread</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <p>(222)</p>
+                        </div>
+                        <div style="display: flex;align-items: center;">
+                            <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                            <p>$18.00</p>
+                            <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                        </div>
+                        <div class="card-btn">
+                            <input value="1"  type="number">
+                            <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                            <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+           </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+        <div class="login">
+            <div>
+                <h1>Get 25% Discount on <br> your first purchase</h1>
+                <p>Just Sign Up & Register it now to become member.</p>
+            </div>
+            <div>
+                <input placeholder="Name" type="text">
+                <input placeholder="Email Adress" type="email">
+                <button>Submit</button>
+            </div>
+        </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+            <div class="heading">
+                <h2>Most popular products</h2>
+                <button>view all</button>
+            </div>
+           <div class="swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="images/product-thumb-11.png" alt="">
+                        <p>Whole Wheat Sandwich Bread</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <p>(222)</p>
+                        </div>
+                        <div style="display: flex;align-items: center;">
+                            <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                            <p>$18.00</p>
+                            <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                        </div>
+                        <div class="card-btn">
+                            <input value="1"  type="number">
+                            <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                            <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="images/product-thumb-12.png" alt="">
+                        <p>Whole Wheat Sandwich Bread</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <p>(222)</p>
+                        </div>
+                        <div style="display: flex;align-items: center;">
+                            <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                            <p>$18.00</p>
+                            <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                        </div>
+                        <div class="card-btn">
+                            <input value="1"  type="number">
+                            <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                            <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="images/product-thumb-13.png" alt="">
+                        <p>Whole Wheat Sandwich Bread</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <p>(222)</p>
+                        </div>
+                        <div style="display: flex;align-items: center;">
+                            <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                            <p>$18.00</p>
+                            <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                        </div>
+                        <div class="card-btn">
+                            <input value="1"  type="number">
+                            <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                            <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="images/product-thumb-14.png" alt="">
+                        <p>Whole Wheat Sandwich Bread</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <p>(222)</p>
+                        </div>
+                        <div style="display: flex;align-items: center;">
+                            <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                            <p>$18.00</p>
+                            <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                        </div>
+                        <div class="card-btn">
+                            <input value="1"  type="number">
+                            <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                            <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="images/product-thumb-16.png" alt="">
+                        <p>Whole Wheat Sandwich Bread</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <p>(222)</p>
+                        </div>
+                        <div style="display: flex;align-items: center;">
+                            <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                            <p>$18.00</p>
+                            <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                        </div>
+                        <div class="card-btn">
+                            <input value="1"  type="number">
+                            <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                            <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="images/product-thumb-17.png" alt="">
+                        <p>Whole Wheat Sandwich Bread</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <p>(222)</p>
+                        </div>
+                        <div style="display: flex;align-items: center;">
+                            <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                            <p>$18.00</p>
+                            <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                        </div>
+                        <div class="card-btn">
+                            <input value="1"  type="number">
+                            <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                            <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="images/product-thumb-18.png" alt="">
+                        <p>Whole Wheat Sandwich Bread</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <p>(222)</p>
+                        </div>
+                        <div style="display: flex;align-items: center;">
+                            <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                            <p>$18.00</p>
+                            <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                        </div>
+                        <div class="card-btn">
+                            <input value="1"  type="number">
+                            <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                            <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+           </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+            <div class="heading">
+                <h2>Just Arrived</h2>
+                <button>view all</button>
+            </div>
+           <div class="swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="images/product-thumb-11.png" alt="">
+                        <p>Whole Wheat Sandwich Bread</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <p>(222)</p>
+                        </div>
+                        <div style="display: flex;align-items: center;">
+                            <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                            <p>$18.00</p>
+                            <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                        </div>
+                        <div class="card-btn">
+                            <input value="1"  type="number">
+                            <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                            <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="images/product-thumb-12.png" alt="">
+                        <p>Whole Wheat Sandwich Bread</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <p>(222)</p>
+                        </div>
+                        <div style="display: flex;align-items: center;">
+                            <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                            <p>$18.00</p>
+                            <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                        </div>
+                        <div class="card-btn">
+                            <input value="1"  type="number">
+                            <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                            <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="images/product-thumb-13.png" alt="">
+                        <p>Whole Wheat Sandwich Bread</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <p>(222)</p>
+                        </div>
+                        <div style="display: flex;align-items: center;">
+                            <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                            <p>$18.00</p>
+                            <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                        </div>
+                        <div class="card-btn">
+                            <input value="1"  type="number">
+                            <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                            <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="images/product-thumb-14.png" alt="">
+                        <p>Whole Wheat Sandwich Bread</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <p>(222)</p>
+                        </div>
+                        <div style="display: flex;align-items: center;">
+                            <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                            <p>$18.00</p>
+                            <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                        </div>
+                        <div class="card-btn">
+                            <input value="1"  type="number">
+                            <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                            <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="images/product-thumb-16.png" alt="">
+                        <p>Whole Wheat Sandwich Bread</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <p>(222)</p>
+                        </div>
+                        <div style="display: flex;align-items: center;">
+                            <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                            <p>$18.00</p>
+                            <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                        </div>
+                        <div class="card-btn">
+                            <input value="1"  type="number">
+                            <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                            <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="images/product-thumb-17.png" alt="">
+                        <p>Whole Wheat Sandwich Bread</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <p>(222)</p>
+                        </div>
+                        <div style="display: flex;align-items: center;">
+                            <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                            <p>$18.00</p>
+                            <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                        </div>
+                        <div class="card-btn">
+                            <input value="1"  type="number">
+                            <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                            <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="images/product-thumb-18.png" alt="">
+                        <p>Whole Wheat Sandwich Bread</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <p>(222)</p>
+                        </div>
+                        <div style="display: flex;align-items: center;">
+                            <p style="margin-right: 10px; text-decoration: line-through;color: #737373;">$24.00</p>
+                            <p>$18.00</p>
+                            <p style="margin-left: 10px; padding: 2px; border: #737373 solid 1px;color: #737373;">10% OFF</p>
+                        </div>
+                        <div class="card-btn">
+                            <input value="1"  type="number">
+                            <button class="addToCart"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+                            <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+           </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="heading">
+                <h2>Our Recent Blog</h2>
+                <button>view all</button>
+            </div>
+            <div class="blog">
+
+                <div class="blog-card">
+                    <img src="images/post-thumbnail-1.jpg" alt="">
+                    <p><i class="fa-solid fa-calendar-days"></i>  22 Aug 2021
+                        <i class="fa-regular fa-folder"></i>  tips & tricks</p>
+                    <h2>Top 10 casual look ideas to dress up your kids</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
+                </div>
+                <div class="blog-card">
+                    <img src="images/post-thumbnail-2.jpg" alt="">
+                    <p><i class="fa-solid fa-calendar-days"></i>  22 Aug 2021
+                        <i class="fa-regular fa-folder"></i>  tips & tricks</p>
+                    <h2>Top 10 casual look ideas to dress up your kids</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
+                </div>
+                <div class="blog-card">
+                    <img src="images/post-thumbnail-3.jpg" alt="">
+                    <p><i class="fa-solid fa-calendar-days"></i>  22 Aug 2021
+                        <i class="fa-regular fa-folder"></i>  tips & tricks</p>
+                    <h2>Top 10 casual look ideas to dress up your kids</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="app">
+                <div>
+                    <h2>Download Organic App</h2>
+                    <p>Online Orders made easy, fast and reliable</p>
+                    <div class="download">
+                        <a href=""><img src="images/img-app-store.png" alt=""></a>
+                        <a href=""><img src="images/img-google-play.png" alt=""></a>
+                    </div>
+                </div>
+                <img src="images/banner-onlineapp.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <div style="align-self: center;">
+            <svg width="157" height="41" viewBox="0 0 157 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.12 5.44653L3.32 5.84653C5.37659 6.56108 7.57274 6.78035 9.73 6.48653C11.9969 6.13474 14.3171 6.44735 16.41 7.38653C17.5195 7.85898 18.4933 8.60145 19.2425 9.54634C19.9918 10.4912 20.4928 11.6085 20.7 12.7965C20.9107 13.939 20.8892 15.1122 20.6366 16.2461C20.3841 17.3801 19.9057 18.4515 19.23 19.3965C19.29 19.6065 19.35 19.8165 19.4 20.0265C19.8062 21.7536 20.0075 23.5224 20 25.2965H18C17.906 23.8444 17.7088 22.4007 17.41 20.9765C16.0226 21.7257 14.4667 22.1078 12.89 22.0865C11.4195 22.0855 9.96418 21.7897 8.61 21.2165C1 17.9665 2 7.15653 2 6.70653L2.12 5.44653ZM9.39 19.3765C12 20.4865 15.12 20.2965 16.87 18.9265C16.5742 17.9376 16.1684 16.9849 15.66 16.0865C15.2648 15.4399 14.7986 14.8396 14.27 14.2965C13.7299 13.7477 13.1216 13.2705 12.46 12.8765C11.0929 12.0591 9.5768 11.522 8 11.2965V10.2965C9.81422 10.2337 11.6173 10.6039 13.26 11.3765C14.9396 12.1961 16.364 13.458 17.38 15.0265C17.7568 15.6256 18.091 16.2505 18.38 16.8965C18.8435 15.7109 18.9749 14.4213 18.76 13.1665C18.6192 12.2881 18.2571 11.4599 17.7078 10.7601C17.1584 10.0603 16.4399 9.51187 15.62 9.16653C14.4244 8.60769 13.1198 8.32081 11.8 8.32653C11.18 8.32653 10.57 8.38653 9.93 8.43653C7.92568 8.69514 5.89067 8.57643 3.93 8.08653C4 10.8465 4.5 17.2965 9.39 19.3765Z" fill="#17C548"/>
+                <g clip-path="url(#clip0_1_1546)">
+                <path d="M23.7447 28.2344C35.3888 30.9431 38.63 21.2556 39.8001 16.5657C39.8306 16.4379 39.8351 16.3052 39.8134 16.1755C39.7916 16.0458 39.7441 15.9218 39.6736 15.8109C39.6032 15.6999 39.5111 15.6042 39.403 15.5294C39.2949 15.4546 39.1728 15.4023 39.0441 15.3755C22.4272 11.8303 20.5611 19.8521 18.8747 27.1015L17.9684 30.9975" stroke="#17C548" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18.8747 27.1014C18.8747 27.1014 20.2342 21.2574 28.2527 22.0961" stroke="#17C548" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <path d="M61.207 10.7C61.207 8.51333 60.047 7.42 57.727 7.42C55.407 7.42 54.247 8.51333 54.247 10.7V25.18C54.247 27.3933 55.407 28.5 57.727 28.5C60.047 28.5 61.207 27.3933 61.207 25.18V10.7ZM50.487 10.58C50.487 8.58 51.087 6.98 52.287 5.78C53.5136 4.58 55.3136 3.98 57.687 3.98C60.087 3.98 61.9003 4.59333 63.127 5.82C64.3537 7.02 64.967 8.60667 64.967 10.58V25.34C64.967 27.3133 64.3537 28.9 63.127 30.1C61.9003 31.3 60.1003 31.9 57.727 31.9C55.3536 31.9 53.5536 31.3 52.327 30.1C51.1003 28.9 50.487 27.3133 50.487 25.34V10.58ZM77.6798 8.38H78.5998V11.94H77.3998C76.1465 11.94 74.7731 12.4467 73.2798 13.46V31.5H69.5198V8.5H73.1198V10.18C73.1998 10.1267 73.3465 10.02 73.5598 9.86C73.7998 9.7 73.9465 9.60666 73.9998 9.58C74.0798 9.52667 74.2131 9.43333 74.3998 9.3C74.6131 9.16667 74.7598 9.08667 74.8398 9.06C74.9198 9.03333 75.0398 8.98 75.1998 8.9C75.3865 8.79333 75.5331 8.72667 75.6398 8.7C75.7465 8.67333 75.8798 8.63333 76.0398 8.58C76.2265 8.5 76.3998 8.46 76.5598 8.46C77.0398 8.40667 77.4131 8.38 77.6798 8.38ZM96.1176 9.98H94.7576C94.1443 9.98 93.6243 10.1 93.1976 10.34C93.9443 11.2733 94.3176 12.5133 94.3176 14.06V17.34C94.3176 19.2067 93.7443 20.66 92.5976 21.7C91.4776 22.74 89.7709 23.2733 87.4776 23.3C86.2243 23.3 85.5976 23.8867 85.5976 25.06C85.5976 25.62 85.7576 26.02 86.0776 26.26C86.4243 26.5 87.0243 26.62 87.8776 26.62H90.1976C93.9843 26.62 95.8776 28.2067 95.8776 31.38V32.06C95.8776 35.66 93.3309 37.46 88.2376 37.46H86.6776C83.7709 37.46 81.5709 36.9933 80.0776 36.06V32.54C81.8376 33.6867 84.0109 34.26 86.5976 34.26H87.8776C89.4776 34.26 90.6109 34.0733 91.2776 33.7C91.9443 33.3267 92.2776 32.7667 92.2776 32.02V31.66C92.2776 31.02 92.1043 30.5533 91.7576 30.26C91.4376 29.94 90.7976 29.78 89.8376 29.78H87.3976C83.9576 29.78 82.2376 28.62 82.2376 26.3V25.66C82.2376 24.1667 82.9443 23.26 84.3576 22.94C81.6643 22.1667 80.3176 20.3 80.3176 17.34V14.06C80.3176 12.1667 80.8909 10.7 82.0376 9.66C83.2109 8.62 84.8376 8.1 86.9176 8.1C88.9976 8.1 90.5976 8.42 91.7176 9.06C92.2776 7.35333 93.5443 6.5 95.5176 6.5H96.1176V9.98ZM90.5576 17.3V14.1C90.5576 13.1133 90.3043 12.3933 89.7976 11.94C89.2909 11.46 88.4643 11.22 87.3176 11.22C86.1709 11.22 85.3443 11.46 84.8376 11.94C84.3309 12.3933 84.0776 13.1133 84.0776 14.1V17.3C84.0776 18.2867 84.3309 19.02 84.8376 19.5C85.3443 19.9533 86.1709 20.18 87.3176 20.18C88.4643 20.18 89.2909 19.9533 89.7976 19.5C90.3043 19.02 90.5576 18.2867 90.5576 17.3ZM101.606 24.9V26.1C101.606 26.98 101.806 27.6333 102.206 28.06C102.633 28.4867 103.446 28.7 104.646 28.7C105.873 28.7 106.993 28.2867 108.006 27.46V20.78L104.206 21.82C103.166 22.1133 102.473 22.4867 102.126 22.94C101.78 23.3667 101.606 24.02 101.606 24.9ZM99.0064 9.06C100.526 8.55333 102.46 8.3 104.806 8.3C109.366 8.3 111.646 10.3667 111.646 14.5V31.5H108.046V29.86C106.873 31.0333 105.326 31.62 103.406 31.62C99.7264 31.62 97.8864 29.7667 97.8864 26.06V24.74C97.8864 23.2467 98.273 22.0467 99.0464 21.14C99.8197 20.2067 101.06 19.5 102.766 19.02L108.006 17.58V14.5C108.006 13.5133 107.74 12.8067 107.206 12.38C106.673 11.9267 105.54 11.7 103.806 11.7C102.1 11.7 100.5 11.9667 99.0064 12.5V9.06ZM119.995 9.54C121.701 8.79333 123.288 8.42 124.755 8.42C126.248 8.42 127.461 8.87333 128.395 9.78C129.355 10.66 129.835 11.94 129.835 13.62V31.5H125.995V14.26C125.995 12.6867 125.208 11.9 123.635 11.9C122.488 11.9 121.328 12.1933 120.155 12.78V31.5H116.395V8.5H119.995V9.54ZM138.678 4.3C138.678 5.76667 137.945 6.5 136.478 6.5C135.011 6.5 134.278 5.76667 134.278 4.3C134.278 2.80666 135.011 2.06 136.478 2.06C137.945 2.06 138.678 2.80666 138.678 4.3ZM134.598 8.78H138.358V31.5H134.598V8.78ZM142.909 14.38C142.909 10.3267 145.256 8.3 149.949 8.3C151.629 8.3 153.122 8.48666 154.429 8.86V12.34C153.096 11.9667 151.736 11.78 150.349 11.78C148.989 11.78 148.029 12.0067 147.469 12.46C146.936 12.9133 146.669 13.6333 146.669 14.62V25.42C146.669 26.4067 146.936 27.1267 147.469 27.58C148.029 28.0333 149.016 28.26 150.429 28.26C151.842 28.26 153.189 28.0467 154.469 27.62V31.14C152.922 31.5133 151.416 31.7 149.949 31.7C145.256 31.7 142.909 29.6733 142.909 25.62V14.38Z" fill="black"/>
+                <defs>
+                <clipPath id="clip0_1_1546">
+                <rect width="24" height="24" fill="white" transform="translate(20.0311 8.88989) rotate(13.0957)"/>
+                </clipPath>
+                </defs>
+                </svg>
+                <div class="footer-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-amazon"></i></a>
+                </div>
+        </div>
+        <div class="footer-links">
+            <h4>services</h4>
+            <a href="">contact us</a>
+            <a href="">press</a>
+            <a href="">pay rol</a>
+            <a href="">library</a>
+            <a href="">blog</a>
+            <a href="">help center</a>
+        </div>
+        <div class="footer-links">
+            <h4>Resources</h4>
+            <a href="">pricing</a>
+            <a href="">FAQs</a>
+            <a href="">contact support</a>
+            <a href="">privacy policy</a>
+            <a href="">terms</a>
+        </div>
+        <div class="footer-links">
+            <h4>Support</h4>
+            <a href="">contact</a>
+            <a href="">affiliates</a>
+            <a href="">site map</a>
+            <a href="">cancelation policy</a>
+            <a href="">security</a>
+        </div>
+        <div class="footer-links">
+            <h4>Support</h4>
+            <a href="">contact</a>
+            <a href="">affiliates</a>
+            <a href="">site map</a>
+            <a href="">cancelation policy</a>
+            <a href="">security</a>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+
+
+
